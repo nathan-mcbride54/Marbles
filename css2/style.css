@@ -1,0 +1,638 @@
+/* ------------------------------------------------------------------ */
+/* NAME: style.css */
+/* DESCRIPTION: All of the styling for our site. */
+/* ------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Eponymous Regular';
+  src: url('eponymous-regular-webfont.woff') format('woff');
+	src: url('eponymous-regular-webfont.woff2') format('woff2');
+}
+
+h1,h2,h3,h4,h5,h6,p,span,div{
+  font-family: Arial, sans-serif;
+}
+
+html{
+  height: 95%;
+}
+
+body{
+  background-color: #333333;
+  height: 100%;
+  width: 100%;
+}
+
+#container, #container-index{
+  background-color: #282828;
+  border-top: 0.25em solid;
+  border-bottom: 0.25em solid;
+  border-image: linear-gradient(to bottom, rgba(219, 183, 121, 1) 0%, rgba(238, 198, 129, 1) 50%, rgba(219, 183, 121, 1) 100%) 60;
+  border-left: 0.25em solid #eec681;
+  border-right: 0.25em solid #eec681;
+  box-shadow: 0 0 0.25em 0.25em #282828;
+  display: flex;
+  flex-direction: column;
+  min-height: 90%;
+  margin: 3em auto;
+  width: 90%;
+}
+
+/********************/
+/*HEADER RELATED CSS*/
+/********************/
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4em 4em;
+}
+
+header>div{
+  display: flex;
+  flex-direction: row;
+}
+nav{
+  color: #d8b573;
+}
+
+nav>div>div:first-child{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2.5em;
+  margin: 2em 1em;
+}
+
+nav>div{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+nav>div>div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0.5em;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+ .navlink{
+  border: 0.05em solid #111;
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 700;
+  padding: 0.75em;
+  margin: 0.5em;
+  height: 5em;
+  width: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.navlink:hover{
+  border: 0.05em solid #d8b573;
+}
+
+.navlink>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.closebtn{
+  font-family: 'Eponymous Regular';
+
+  text-decoration: none;
+  color: #d8b573;
+  padding-right: 1em;
+  align-self: center;
+  font-weight: 100;
+}
+
+.logo{
+  font-family: 'Eponymous Regular';
+  color: #d8b573;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+/******************/
+/*MAIN RELATED CSS*/
+/******************/
+
+.prevBtn, .nextBtn{
+  text-decoration: none;
+  font-family: 'Eponymous Regular';
+  color: #d8b573;
+}
+
+
+main{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+margin: 1em 0;
+}
+
+main>div>h2{
+  text-transform: uppercase;
+  background: linear-gradient(90deg, rgba(237,198,127,1) 30%, rgba(206,173,108,1) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.85em;
+  font-weight: 700;
+  margin-bottom: 0.15em;
+}
+
+
+
+main>div>h3{
+  font-family: 'Eponymous Regular';
+  color: #969696;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.genre{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  color: #d7d7d8;
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+.genre>h3{
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.movierow{
+  display: flex;
+  margin-bottom: 5em;
+  font-size: 0.57em;
+}
+
+.movie{
+  border: 0.05em solid #969696;
+  height: 22em;
+  width: 19em;
+  margin: 0 1.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options{
+  display: none;
+  color: #edc580;
+  font-size: 0.75em;
+}
+
+.options:hover{
+  display:block;
+}
+
+.options>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.options>div>div{
+  padding: 0 1em;
+}
+
+.options>div>div>a>i{
+  color: #edc580;
+}
+
+.movie:hover>div{
+  display: flex;
+}
+
+.movie:hover{
+  border: 0.05em solid #edc580;
+}
+
+.cover{
+  width: 169px;
+  height: 240px;
+  margin: 1em 1em 0.5em 1em;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  color: #fff;
+  font-size: 1.75em;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+
+/********************/
+/*FOOTER RELATED CSS*/
+/********************/
+
+footer{
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer>div>h1{
+  font-family: 'Eponymous Regular';
+  color: #d8b573;
+  font-weight: 100;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+footer>div.locations{
+  display: flex;
+  justify-content: space-around;
+}
+
+.location{
+  align-items:flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 0 6em 2em 6em;
+}
+
+.location>h2{
+  color: #fff;
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+
+div.locations>div.location{
+  align-content: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.location>div{
+  display: inline-block;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  margin-right: 0.5em;
+}
+
+.info{
+  color: #e2bc7b;
+}
+
+.info+span, #information > ul > span{
+  color: #8b8b8b;
+}
+
+.location>a{
+  color: #8b8b8b;
+  font-size: 0.7em;
+  margin-top: 2em;
+  text-decoration: none;
+}
+
+.location>a:hover{
+  color: #e2bc7b;
+}
+
+footer>span{
+  color: #8b8b8b;
+  font-size: 0.7em;
+  margin-top: 4em;
+  margin-bottom: 7em;
+}
+
+/****************************/
+/*DISPLAYDETAILS RELATED CSS*/
+/****************************/
+
+#details{
+  border: 0.05em solid #969696;
+  height: 30em;
+  width: 50em;
+  margin: 0 1.75em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 4em;
+}
+
+#information{
+  color: #fff;
+  font-size: 1.1em;
+  padding: 2em;
+}
+
+#information>ul>li{
+  margin: 0.3em 0 0.3em 0;
+}
+
+#information>.title{
+  font-size: 2em;
+}
+
+#information>ul>li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*********************/
+/*SEARCH RELATED CSS*/
+/********************/
+
+.outer{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+select{
+  padding: 0.25em;
+}
+
+input[type=text]{
+  padding: 0.25em;
+}
+
+#searchform>span>button{
+  padding: 0.25em 1.25em;
+}
+
+/********************/
+/* FORM RELATED CSS */
+/********************/
+
+#errordiv{
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+#loginModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+#registerModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  margin: 5% auto;
+  width: 27%;
+}
+
+#closeBtn {
+  color: #d8b573;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  font-size: 1.5em;
+}
+
+#closeBtn:hover,#closeBtn:focus {
+  color: #f4f4f4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+input[type=text], [type=password] {
+  background-color: #282828;
+  color: #d8b573;
+  border: 0.1em solid #d8b573;
+  border-radius: 3px;
+  font-family: sans-serif;
+  margin: 0.5em 1em;
+  padding: 0.9em 1.5em;
+
+}
+
+input[type=text]:focus {
+  background-color: #222222;
+}
+
+input[type=submit], input[type=button], .button {
+  background-color: #282828;
+  border: 0.1em solid #d8b573;
+  border-radius: 3px;
+  color: #d8b573;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 0.6em 0;
+  padding: 1em 1.5em;
+  /* align-self: stretch; */
+}
+
+input[type=submit]:focus, input[type=submit]:hover, input[type=button]:hover, input[type=button]:focus{
+  background-color: #d8b573;
+  color: black;
+}
+
+
+#splash-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#splash-buttons input[type=button] {
+  margin-left: 2em;
+  margin-right: 2em;
+  width: 8em;
+  height: 3em;
+}
+
+#splash-buttons a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.form-body {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height:auto;
+}
+
+.form-body main {
+  width: 40em;
+}
+
+.form-window form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 1em 1em;
+  align-items: center;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  padding-top: 10px;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.video, .mpaa-rating, #rateYo{
+  padding-top: 1em;
+}
+
+.imageLink {
+  display: none;
+}
+
+
+#charCount, .coverSelection {
+  font-family: 'Arial';
+  color: #969696;
+  font-size: 1.5em;
+}
+
+#form-login, #form-register, #form-{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#form-login > div > a {
+  color: #d8b573;
+  margin: 0.5em 0.5em;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  text-decoration: none;
+}
+
+label {
+  color: #d8b573;
+  font-family: sans-serif;
+}
+
+
+
+/******************************************/
+/* STAR RATING CSS */
+/******************************************/
+
+.jq-ry-group-wrapper {
+  z-index: 0;
+}
+
+/****************************/
+/*  DELETEMODAL RELATED CSS */
+/****************************/
+
+.deleteBtn:hover, #deleteBtn:hover{
+  cursor: pointer;
+}
+
+#deleteModal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.warning{
+  color: #d8b573;
+}
+/**************************/
+/* END OF STAR RATING CSS */
+/**************************/
+
+#addvid > div > select {
+  background-color: #fff;
+  border: 0.1em solid #ccc;
+  border-radius: 3px;
+  color: #777;
+  font-family: sans-serif;
+  margin: 0.5em 0;
+  padding: 0.9em 1.5em;
+  width: 100%;
+}
+
+/********************/
+/* SIDE NAV BAR CSS */
+/********************/
+
+/* The side navigation menu */
+.sidenav {
+ height: 100%; /* 100% Full-height */
+ width: 0; /* 0 width - change this with JavaScript */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Stay on top */
+ top: 0; /* Stay at the top */
+ right: 0;
+  background: linear-gradient(to bottom, #111, #111 70%, transparent 225%),
+      url("../img/city.jpeg");
+ overflow-x: hidden; /* Disable horizontal scroll */
+ padding-top: 2em/*60px*/; /* Place content 60px from the top */
+ transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+ }
+
+/*********************/
+/* ERROR-RELATED CSS */
+/*********************/
+
+#errordiv{
+  width: 100%;
+}
+
+.error{
+  padding: 0.3em 0;
+  color: #969696;
+  font-size: 0.8em;
+  width: 90%;
+}
